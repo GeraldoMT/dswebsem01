@@ -1,0 +1,184 @@
+/* Tipografía general */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eaf1f8; /* gris azulado claro */
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+/* Animación inicial */
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0a192f; /* azul navy oscuro */
+  color: #0d6efd;   /* azul Bootstrap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2000;
+  animation: fadeOut 2.5s ease forwards;
+}
+
+.intro-text {
+  font-size: 2.5rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.intro-text span {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #0dcaf0; /* celeste Bootstrap */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0; visibility: hidden;}
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0a192f !important; /* azul navy */
+}
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #0dcaf0 !important; /* celeste */
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+  border: none;
+}
+.toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  margin: 6px auto;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-toggler.collapsed .top-bar {transform: rotate(0) translate(0, 0);}
+.navbar-toggler.collapsed .middle-bar {opacity: 1;}
+.navbar-toggler.collapsed .bottom-bar {transform: rotate(0) translate(0, 0);}
+.navbar-toggler:not(.collapsed) .top-bar {transform: rotate(45deg) translate(5px, 6px);}
+.navbar-toggler:not(.collapsed) .middle-bar {opacity: 0;}
+.navbar-toggler:not(.collapsed) .bottom-bar {transform: rotate(-45deg) translate(6px, -6px);}
+
+/* Carrusel */
+.carousel-inner img {
+  height: 500px;        /* Ajusta entre 400px y 600px si lo prefieres */
+  object-fit: cover;    /* Recorta sin deformar */
+  width: 100%;
+}
+
+/* Texto de las descripciones del carrusel */
+.carousel-caption h5 {
+  color: #0dcaf0 !important; /* celeste Bootstrap */
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.carousel-caption p {
+  color: #20c997 !important; /* celeste-verde (teal) */
+  font-weight: 600;          
+  text-shadow: none;
+}
+
+/* Cards y secciones */
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-title {
+  color: #0d6efd; /* azul Bootstrap */
+}
+
+/* Footer */
+footer {
+  background: #0a192f; /* azul navy oscuro */
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+footer a {
+  color: #0dcaf0;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* -------- Proyectos -------- */
+.card img {
+  height: 200px;          /* altura uniforme */
+  object-fit: cover;      /* recorta sin deformar */
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-title {
+  color: #0dcaf0;         /* Celeste llamativo */
+  font-weight: bold;
+}
+
+.card-text {
+  color: #198754;         /* Verde elegante */
+  font-weight: 500;
+}
+
+/* Efecto hover moderno en proyectos */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* -------- Footer -------- */
+.footer {
+  background: #212529;    /* gris oscuro elegante */
+  font-size: 0.9rem;
+}
+.footer a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer a:hover {
+  color: #0dcaf0;         /* efecto hover en links */
+}
+/* Animación de entrada (fade + desplazamiento) */
+.page-enter {
+  animation: fadeSlide 0.8s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
